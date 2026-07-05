@@ -454,6 +454,17 @@
       animation: fadeUp 0.8s ease 0.55s forwards;
     }
 
+    .hero-cta-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-top: clamp(20px, 4.5vw, 32px);
+      background: var(--lime); color: var(--navy-deep);
+      font-family: 'Poppins', sans-serif; font-size: clamp(13px, 3vw, 15px); font-weight: 700;
+      text-decoration: none; padding: 14px 28px; border-radius: 100px;
+      transition: transform 0.25s, box-shadow 0.25s;
+      opacity: 0; animation: fadeUp 0.8s ease 0.63s forwards;
+    }
+    .hero-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px var(--lime-glow); }
+
     .hero-chips {
       margin-top: clamp(28px, 6vw, 48px);
       display: flex; align-items: center;
@@ -929,7 +940,7 @@
       </div>
       <div>
         <div class="logo-text">handwerk<span>.auffindbar</span></div>
-        <div class="logo-sub">SEO · Stuttgart & Region</div>
+        <div class="logo-sub">SEO – Stuttgart & Region</div>
       </div>
     </a>
     <div class="nav-links">
@@ -954,6 +965,7 @@
       Sichtbar für Kunden in Stuttgart & Region.<br>
       Keine Agentur, keine leeren Versprechen.
     </p>
+      <a href="#kontakt" class="hero-cta-btn">Kostenlosen Sichtbarkeits-Check starten ↓</a>
 
     <div class="hero-chips" role="list">
 
