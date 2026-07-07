@@ -691,6 +691,36 @@
       to   { opacity: 1; transform: none; }
     }
 
+    /* ── ANDERS ── */
+    .diff {
+      position: relative; z-index: 1;
+      background: var(--navy-deep);
+      padding: clamp(60px, 10vw, 100px) 20px;
+      border-top: 1px solid var(--white-10);
+      border-bottom: 1px solid var(--white-10);
+    }
+    .diff-inner { max-width: 1000px; margin: 0 auto; }
+    .diff-headline {
+      font-size: clamp(24px, 4.5vw, 38px); font-weight: 800;
+      letter-spacing: -0.03em; margin: 14px 0 36px;
+    }
+    .diff-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px 28px;
+    }
+    .diff-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; border-radius: 14px;
+      background: var(--white-05); border: 1px solid var(--white-10);
+    }
+    .diff-item svg {
+      width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px;
+      stroke: var(--lime); stroke-width: 2.5; fill: none;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+    .diff-item strong { display: block; font-size: 14.5px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
+    .diff-item span { font-size: 13px; line-height: 1.55; color: var(--white-70); }
+
     .reveal {
       opacity: 0; transform: translateY(26px);
       transition: opacity 0.7s ease, transform 0.7s ease;
@@ -986,6 +1016,48 @@
   </section>
 
   <!-- ABOUT -->
+
+  <section class="diff" aria-labelledby="diff-heading">
+    <div class="diff-inner">
+      <div class="eyebrow reveal">Warum ich</div>
+      <h2 id="diff-heading" class="diff-headline reveal">Was bei mir <span class="lime">anders</span> läuft.</h2>
+      <div class="diff-grid">
+        <div class="diff-item reveal">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <div><strong>Kein Erst- oder Strategiegespräch</strong><span>Der kostenlose Check liefert dir sofort die wichtigsten Befunde – ich zeige erst, dann reden wir.</span></div>
+        </div>
+        <div class="diff-item reveal">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <div><strong>Feste Paketpreise</strong><span>Statt individueller Angebote: Du weißt vorher, was es kostet – und hinterher, was es gebracht hat.</span></div>
+        </div>
+        <div class="diff-item reveal">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <div><strong>WhatsApp statt E-Mail-Pingpong</strong><span>Du bist unterwegs, nicht am Schreibtisch. Eine Sprachnachricht vom Gerüst reicht.</span></div>
+        </div>
+        <div class="diff-item reveal">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <div><strong>Dein Aufwand: ein paar Infos</strong><span>Ein paar Angaben zum Betrieb, Fotos, eventuell ein Zugang – den Rest mache ich.</span></div>
+        </div>
+        <div class="diff-item reveal">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <div><strong>Klartext statt Marketing-Sprache</strong><span>Du bekommst keine Fachbegriffe, sondern: Das haben wir gemacht, das hat es gebracht.</span></div>
+        </div>
+        <div class="diff-item reveal">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <div><strong>Ergebnisprotokoll mit Zahlen</strong><span>Am Ende bekommst du ein Blatt: Ranking vorher/nachher, Anrufe, Profilaufrufe. Zum Vorzeigen.</span></div>
+        </div>
+        <div class="diff-item reveal">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <div><strong>Keine Laufzeitverträge</strong><span>Einmal sauber aufgebaut, mit wenig Pflege dauerhaft sichtbar – kein Abo-Zwang.</span></div>
+        </div>
+        <div class="diff-item reveal">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <div><strong>Eine Person, ein Gesicht</strong><span>Wer den Check macht, macht auch die Arbeit. Kein Junior, kein Ticketsystem.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="about" id="ueber-mich" aria-labelledby="about-heading">
     <div class="about-inner">
       <div class="about-left reveal">
