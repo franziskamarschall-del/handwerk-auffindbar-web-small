@@ -764,6 +764,21 @@
     }
     .audience-note strong { color: var(--white); }
 
+    /* ── PROBLEM ── */
+    .problem {
+      position: relative; z-index: 1;
+      padding: clamp(50px, 8vw, 80px) 20px;
+    }
+    .problem-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+    .problem-headline {
+      font-size: clamp(24px, 4.5vw, 38px); font-weight: 800;
+      letter-spacing: -0.03em; margin: 14px 0 20px; line-height: 1.2;
+    }
+    .problem-text {
+      font-size: clamp(15px, 3.2vw, 17px); line-height: 1.75; color: var(--white-70);
+    }
+    .problem-text strong { color: var(--white); }
+
     .reveal {
       opacity: 0; transform: translateY(26px);
       transition: opacity 0.7s ease, transform 0.7s ease;
@@ -980,6 +995,16 @@
   </section>
 
   <!-- ABOUT -->
+
+
+  <section class="problem" aria-labelledby="problem-heading">
+    <div class="problem-inner">
+      <div class="eyebrow reveal" style="justify-content:center;">Das Problem</div>
+      <h2 id="problem-heading" class="problem-headline reveal">Deine Kunden googeln. <span class="lime">Und finden die Konkurrenz.</span></h2>
+      <p class="problem-text reveal">Wer heute einen Elektriker, einen Dachdecker oder einen Sanitärbetrieb sucht, fragt nicht mehr im Bekanntenkreis – er tippt es bei Google ein. Und entscheidet sich in Sekunden für einen der drei Einträge, die oben in der Karte stehen.</p>
+      <p class="problem-text reveal" style="margin-top:14px;">Wenn dein Betrieb dort nicht auftaucht, findet der Auftrag trotzdem statt. Nur eben bei der Konkurrenz nebenan. Das ist kein Marketing-Problem, das ist <strong>entgangener Umsatz – jede Woche.</strong></p>
+    </div>
+  </section>
 
   <section class="diff" aria-labelledby="diff-heading">
     <div class="diff-inner">
