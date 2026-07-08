@@ -721,6 +721,39 @@
     .diff-item strong { display: block; font-size: 14.5px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
     .diff-item span { font-size: 13px; line-height: 1.55; color: var(--white-70); }
 
+    /* ── ZIELGRUPPEN ── */
+    .audience {
+      position: relative; z-index: 1;
+      padding: clamp(60px, 10vw, 100px) 20px;
+    }
+    .audience-inner { max-width: 1100px; margin: 0 auto; }
+    .audience-head { text-align: center; margin-bottom: clamp(36px, 6vw, 52px); }
+    .audience-headline {
+      font-size: clamp(24px, 4.5vw, 38px); font-weight: 800;
+      letter-spacing: -0.03em; margin-top: 14px;
+    }
+    .audience-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .audience-card {
+      background: var(--navy); border: 1px solid var(--white-10); border-radius: 18px;
+      padding: 26px 22px; transition: transform 0.25s, border-color 0.25s;
+    }
+    .audience-card:hover { transform: translateY(-4px); border-color: rgba(200,230,58,0.35); }
+    .audience-num {
+      font-size: 12px; font-weight: 700; color: var(--lime);
+      letter-spacing: 0.05em; margin-bottom: 10px;
+    }
+    .audience-card h3 { font-size: 16.5px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .audience-card p { font-size: 13.5px; line-height: 1.6; color: var(--white-70); }
+    .audience-note {
+      margin-top: 22px; padding: 16px 20px; border-radius: 14px;
+      background: var(--white-05); border: 1px solid var(--white-10);
+      font-size: 13.5px; line-height: 1.6; color: var(--white-70); text-align: center;
+    }
+    .audience-note strong { color: var(--white); }
+
     .reveal {
       opacity: 0; transform: translateY(26px);
       transition: opacity 0.7s ease, transform 0.7s ease;
@@ -1157,6 +1190,44 @@
 
 
   <!-- BENEFITS -->
+
+  <section class="audience" aria-labelledby="audience-heading">
+    <div class="audience-inner">
+      <div class="audience-head">
+        <div class="eyebrow reveal" style="justify-content:center;">Für wen</div>
+        <h2 id="audience-heading" class="audience-headline reveal">Für wen ich <span class="lime">arbeite.</span></h2>
+      </div>
+      <div class="audience-grid">
+        <div class="audience-card reveal">
+          <div class="audience-num">01</div>
+          <h3>Elektriker</h3>
+          <p>Notdienst-Anfragen laufen längst über Google – wer dort fehlt, verliert die dringenden, gut bezahlten Fälle an die Konkurrenz nebenan.</p>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-num">02</div>
+          <h3>Sanitär & Heizung</h3>
+          <p>Heizungstausch und Badsanierung sind hochpreisige Aufträge. Eine gute Position in der Karte entscheidet, wer angerufen wird.</p>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-num">03</div>
+          <h3>Dachdecker</h3>
+          <p>Sturmschäden und Dachsanierungen werden akut gesucht – genau in dem Moment zählt, wer sofort auffindbar ist.</p>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-num">04</div>
+          <h3>Maler & Stuckateur</h3>
+          <p>Viele Ein-Mann- und Zwei-Mann-Betriebe im Gewerk – wer als Erster ein vollständiges Profil hat, sticht sofort heraus.</p>
+        </div>
+        <div class="audience-card reveal">
+          <div class="audience-num">05</div>
+          <h3>Zimmerei & Holzbau</h3>
+          <p>Größere Projekte mit langer Vorlaufzeit – wer in der Recherchephase sichtbar ist, wird angefragt, nicht nur verglichen.</p>
+        </div>
+      </div>
+      <div class="audience-note reveal"><strong>Dein Gewerk ist nicht dabei?</strong> Kein Ausschlusskriterium. Lokale Sichtbarkeit funktioniert nach denselben Regeln – meld dich einfach, ich sage dir ehrlich, ob es für deinen Betrieb Sinn ergibt.</div>
+    </div>
+  </section>
+
   <section class="benefits" aria-labelledby="benefits-heading">
     <div class="benefits-inner">
       <div class="benefits-head">
