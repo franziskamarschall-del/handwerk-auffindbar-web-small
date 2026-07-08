@@ -679,6 +679,16 @@
     .footer-logo-text span { color: var(--lime); }
 
     .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-social-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(200,230,58,0.1); border: 1px solid rgba(200,230,58,0.25);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .footer-social-icon svg { width: 15px; height: 15px; fill: var(--lime); }
+    .footer-social-icon:hover { background: var(--lime); transform: translateY(-2px); }
+    .footer-social-icon:hover svg { fill: var(--navy-deep); }
+
     .footer-links a {
       font-size: 12px; color: var(--white-40); text-decoration: none;
       transition: color 0.2s;
@@ -762,85 +772,6 @@
     .delay-1 { transition-delay: 0.1s; }
     .delay-2 { transition-delay: 0.2s; }
 
-    /* ── SOCIAL SECTION ── */
-    .social {
-      position: relative; z-index: 1;
-      padding: 0 20px clamp(80px, 12vw, 120px);
-    }
-    .social-inner {
-      max-width: 920px; margin: 0 auto;
-      text-align: center;
-    }
-    .social-eyebrow {
-      font-size: 11px; font-weight: 600;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--lime); margin-bottom: 16px;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-    }
-    .social-eyebrow::before, .social-eyebrow::after {
-      content: ''; height: 1px; background: var(--white-10); width: 60px;
-    }
-    .social-headline {
-      font-size: clamp(22px, 4vw, 32px);
-      font-weight: 800; letter-spacing: -0.03em;
-      margin-bottom: 12px;
-    }
-    .social-sub {
-      font-size: clamp(13px, 2.5vw, 15px);
-      color: var(--white-40); margin-bottom: 48px; line-height: 1.6;
-    }
-    .social-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    @media (max-width: 600px) {
-      .social-cards { grid-template-columns: 1fr; }
-    }
-    .social-card {
-      display: flex; flex-direction: column; align-items: center;
-      gap: 16px; padding: clamp(28px, 5vw, 40px) 24px;
-      border-radius: 16px; border: 1px solid var(--white-10);
-      background: var(--white-05);
-      text-decoration: none;
-      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-      cursor: pointer;
-    }
-    .social-card:hover {
-      transform: translateY(-4px);
-    }
-    .social-card:hover {
-      border-color: rgba(200,230,58,0.4);
-      background: rgba(200,230,58,0.05);
-    }
-    .social-icon {
-      width: 56px; height: 56px; border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .social-icon svg { width: 28px; height: 28px; }
-    .social-card .social-icon { background: rgba(200,230,58,0.12); }
-    .social-card .social-icon svg { fill: #C8E63A; }
-    .social-card-name {
-      font-size: 15px; font-weight: 700; color: var(--white);
-      letter-spacing: -0.01em;
-    }
-    .social-card-handle {
-      font-size: 12px; color: var(--white-40); margin-top: -8px;
-    }
-    .social-card-cta {
-      font-size: 11px; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 8px 18px; border-radius: 100px;
-      border: 1px solid var(--white-10);
-      color: var(--white-40);
-      transition: border-color 0.2s, color 0.2s;
-      margin-top: 4px;
-    }
-    .social-card:hover .social-card-cta {
-      color: var(--white);
-    }
-    .social-card:hover .social-card-cta { border-color: rgba(200,230,58,0.5); color: var(--lime); }
 
     /* ── BENEFITS SECTION ── */
     .benefits {
@@ -1025,8 +956,8 @@
     </h1>
 
     <p class="hero-sub">
-      Sichtbar für Kunden in Stuttgart & Region.<br>
-      Keine Agentur, keine leeren Versprechen.
+      Eine Ansprechpartnerin, Festpreise, messbare Ergebnisse.<br>
+      Sichtbar für Kunden in Stuttgart & Region.
     </p>
       <a href="#kontakt" class="hero-cta-btn">Kostenlosen Sichtbarkeits-Check starten ↓</a>
 
@@ -1141,52 +1072,6 @@
   </div>
 
   <!-- SOCIAL -->
-  <section class="social" aria-labelledby="social-heading">
-    <div class="social-inner">
-      <div class="social-eyebrow reveal">Folg mir</div>
-      <h2 id="social-heading" class="social-headline reveal">Jede Woche neue <span style="color:var(--lime);">Tipps.</span></h2>
-      <p class="social-sub reveal">Lokales SEO für Handwerker – konkret, praxisnah, direkt anwendbar.</p>
-      <div class="social-cards">
-
-        <a href="https://www.linkedin.com/company/130604329" target="_blank" rel="noopener"
-           class="social-card linkedin reveal" aria-label="LinkedIn Profil von handwerk.auffindbar">
-          <div class="social-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-          </div>
-          <div class="social-card-name">LinkedIn</div>
-          <div class="social-card-handle">handwerk.auffindbar</div>
-          <div class="social-card-cta">Folgen</div>
-        </a>
-
-        <a href="https://www.instagram.com/handwerk.auffindbar" target="_blank" rel="noopener"
-           class="social-card instagram reveal reveal-delay-1" aria-label="Instagram Profil von handwerk.auffindbar">
-          <div class="social-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-            </svg>
-          </div>
-          <div class="social-card-name">Instagram</div>
-          <div class="social-card-handle">@handwerk.auffindbar</div>
-          <div class="social-card-cta">Folgen</div>
-        </a>
-
-        <a href="https://www.facebook.com/profile.php?id=61591532398356" target="_blank" rel="noopener"
-           class="social-card facebook reveal reveal-delay-2" aria-label="Facebook Seite von handwerk.auffindbar">
-          <div class="social-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </div>
-          <div class="social-card-name">Facebook</div>
-          <div class="social-card-handle">handwerk.auffindbar</div>
-          <div class="social-card-cta">Folgen</div>
-        </a>
-
-      </div>
-    </div>
-  </section>
 
 
   <!-- BENEFITS -->
@@ -1405,9 +1290,15 @@
       <a href="/handwerker-website/">Website-Tipps</a>
       <a href="/google-unternehmensprofil-handwerker/">Google-Profil</a>
       <a href="/google-bewertungen-handwerker/">Bewertungen</a>
-      <a href="https://www.linkedin.com/company/130604329" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-      <a href="https://www.instagram.com/handwerk.auffindbar" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-      <a href="https://www.facebook.com/profile.php?id=61591532398356" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+      <a href="https://www.linkedin.com/company/130604329" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/handwerk.auffindbar" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61591532398356" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-icon">
+        <svg viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a7.36 7.36 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 1.98-.287 1.687h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+      </a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
     </div>
