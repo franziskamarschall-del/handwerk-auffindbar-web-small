@@ -812,6 +812,34 @@
     }
     .audience-note strong { color: var(--white); }
 
+    .kf {
+      margin-top: 8px;
+      background: var(--white-05); border: 1px solid var(--white-10);
+      border-radius: 16px; padding: clamp(20px, 4vw, 26px);
+    }
+    .kf h3 { font-size: 15.5px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .kf-sub { font-size: 12.5px; color: var(--white-70); margin-bottom: 16px; }
+    .kf-field { margin-bottom: 10px; }
+    .kf-field input, .kf-field textarea {
+      width: 100%; box-sizing: border-box; padding: 10px 13px; border-radius: 8px;
+      border: 1px solid var(--white-10); background: var(--navy-deep); color: var(--white);
+      font-family: 'Poppins', sans-serif; font-size: 13.5px;
+    }
+    .kf-field input::placeholder, .kf-field textarea::placeholder { color: var(--white-40); }
+    .kf-field textarea { min-height: 70px; resize: vertical; }
+    .kf-field input:focus, .kf-field textarea:focus { outline: 2px solid var(--lime); }
+    .kf-privacy { display: flex; align-items: flex-start; gap: 8px; margin: 12px 0 14px; }
+    .kf-privacy input { margin-top: 3px; accent-color: var(--lime); }
+    .kf-privacy label { font-size: 11px; line-height: 1.5; color: var(--white-40); }
+    .kf-privacy a { color: var(--lime); text-decoration: underline; }
+    .kf-submit {
+      width: 100%; background: transparent; color: var(--lime);
+      border: 1px solid var(--lime); border-radius: 100px; padding: 11px;
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .kf-submit:hover { background: var(--lime); color: var(--navy-deep); }
+
     /* ── PROBLEM ── */
     .problem {
       position: relative; z-index: 1;
@@ -1289,6 +1317,29 @@
 
 
 
+      </div>
+
+      <div style="margin-top:32px;max-width:480px;">
+        <p style="font-size:12px;color:rgba(255,255,255,0.4);text-align:center;margin-bottom:16px;">– oder lieber schreiben statt anrufen –</p>
+      </div>
+      <div class="kf">
+        <h3>Lieber schreiben statt WhatsApp?</h3>
+        <p class="kf-sub">Kein Problem – kurze Nachricht reicht, ich melde mich per E-Mail bei dir.</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="97f89110-d892-435f-be7f-09c4d73971bf">
+          <input type="hidden" name="subject" value="Neue Anfrage – handwerk.auffindbar">
+          <input type="hidden" name="from_name" value="handwerk.auffindbar Kontaktformular">
+          <input type="hidden" name="redirect" value="https://handwerk-auffindbar-machen.de/danke/">
+          <input type="checkbox" name="botcheck" style="display:none">
+          <div class="kf-field"><input type="text" name="name" placeholder="Dein Name" required></div>
+          <div class="kf-field"><input type="email" name="email" placeholder="Deine E-Mail" required></div>
+          <div class="kf-field"><textarea name="message" placeholder="Kurz worum's geht (reicht auch: 'Bitte Check schicken')" required></textarea></div>
+          <div class="kf-privacy">
+            <input type="checkbox" required id="kfPrivacy">
+            <label for="kfPrivacy">Ich stimme der Verarbeitung meiner Daten gemäß <a href="/datenschutz.html" target="_blank">Datenschutzerklärung</a> zu.</label>
+          </div>
+          <button type="submit" class="kf-submit">Kostenlosen Check anfordern</button>
+        </form>
       </div>
     </div>
   </section>
