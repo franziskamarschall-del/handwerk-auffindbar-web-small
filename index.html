@@ -819,7 +819,20 @@
       padding: clamp(40px, 7vw, 64px) 20px clamp(60px, 10vw, 90px);
       border-top: 1px solid var(--white-10);
     }
-    .blog-teaser-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+    .blog-teaser-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+    .blog-teaser-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px; margin-top: 28px; text-align: left;
+    }
+    .blog-teaser-card {
+      display: block; text-decoration: none;
+      background: var(--white-05); border: 1px solid var(--white-10); border-radius: 16px;
+      padding: 20px 22px; transition: transform 0.2s, border-color 0.2s;
+    }
+    .blog-teaser-card:hover { transform: translateY(-3px); border-color: rgba(200,230,58,0.35); }
+    .blog-teaser-card h3 { font-size: 15.5px; font-weight: 700; color: var(--white); margin-bottom: 8px; line-height: 1.35; }
+    .blog-teaser-card p { font-size: 13px; line-height: 1.6; color: var(--white-70); margin-bottom: 10px; }
+    .blog-teaser-card span { font-size: 12px; font-weight: 600; color: var(--lime); }
     .blog-teaser-headline {
       font-size: clamp(20px, 3.8vw, 28px); font-weight: 800;
       letter-spacing: -0.02em; margin: 14px 0 16px; line-height: 1.3;
@@ -1361,10 +1374,26 @@
 
   <section class="blog-teaser" aria-labelledby="blog-teaser-heading">
     <div class="blog-teaser-inner">
-      <div class="eyebrow reveal">Aus dem Blog</div>
-      <h2 id="blog-teaser-heading" class="blog-teaser-headline reveal">Warum dein <span class="lime">Google-Profil</span> wichtiger ist als deine Website</h2>
-      <p class="blog-teaser-text reveal">Die meisten Handwerker stecken ihr Budget zuerst in die Website – dabei bringt ein vollständiges Google-Profil schneller Anrufe. Drei Gründe, warum die Reihenfolge meistens falsch ist.</p>
-      <a href="/blog/google-profil-wichtiger-als-website/" class="blog-teaser-link reveal">Artikel lesen →</a>
+      <div class="eyebrow reveal" style="justify-content:center;">Aus dem Blog</div>
+      <h2 id="blog-teaser-heading" class="blog-teaser-headline reveal">Aktuelle <span class="lime">Tipps</span> zur Sichtbarkeit.</h2>
+      <div class="blog-teaser-grid">
+        <a href="/blog/warum-google-nicht-gefunden/" class="blog-teaser-card reveal">
+          <h3>Warum wird mein Betrieb bei Google nicht gefunden?</h3>
+          <p>Die 5 häufigsten Gründe – und was du in 30 Minuten selbst ändern kannst.</p>
+          <span>Weiterlesen →</span>
+        </a>
+        <a href="/blog/google-unternehmensprofil-anleitung/" class="blog-teaser-card reveal">
+          <h3>Google-Profil einrichten: Schritt für Schritt</h3>
+          <p>Kostenlos, in unter einer Stunde – die Kurzanleitung zum Nachmachen.</p>
+          <span>Weiterlesen →</span>
+        </a>
+        <a href="/blog/schlechte-google-bewertung-was-tun/" class="blog-teaser-card reveal">
+          <h3>Schlechte Google-Bewertung erhalten – was jetzt?</h3>
+          <p>Erste Reaktion, richtige Antwort, klarer Fahrplan statt Panik.</p>
+          <span>Weiterlesen →</span>
+        </a>
+      </div>
+      <a href="/blog/" class="blog-teaser-link reveal" style="margin-top:24px;display:inline-block;">Alle Artikel im Blog →</a>
     </div>
   </section>
 
