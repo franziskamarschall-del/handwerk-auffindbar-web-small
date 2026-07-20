@@ -841,6 +841,21 @@
     .blog-teaser-link { font-size: 14px; font-weight: 700; color: var(--lime); text-decoration: none; }
     .blog-teaser-link:hover { text-decoration: underline; }
 
+    /* ── ABLAUF ── */
+    .ablauf { position: relative; z-index: 1; padding: clamp(50px, 8vw, 80px) 20px; }
+    .ablauf-inner { max-width: 780px; margin: 0 auto; }
+    .ablauf-headline { font-size: clamp(24px, 4.5vw, 36px); font-weight: 800; letter-spacing: -0.03em; margin: 14px 0 36px; }
+    .ablauf-step { display: flex; gap: 20px; padding: 22px 0; border-top: 1px solid var(--white-10); }
+    .ablauf-step:last-child { border-bottom: 1px solid var(--white-10); }
+    .ablauf-num {
+      flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
+      background: var(--white-05); border: 1px solid rgba(200,230,58,0.35);
+      color: var(--lime); font-size: 14px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ablauf-step h3 { font-size: 15.5px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .ablauf-step p { font-size: 13.5px; line-height: 1.65; color: var(--white-70); }
+
     /* ── PROBLEM ── */
     .problem {
       position: relative; z-index: 1;
@@ -1237,11 +1252,48 @@
     <div class="about-compact-inner">
       <div class="eyebrow reveal">Wer ich bin</div>
       <h2 id="about-heading" class="about-compact-headline reveal">Ich bin Franziska. Ich mache, dass du <span class="lime">gefunden wirst.</span></h2>
-      <p class="about-compact-text reveal">Über 6 Jahre Online-Marketing, spezialisiert auf lokale Sichtbarkeit. Mein Fokus: Handwerksbetriebe in Stuttgart und der Region – weil ich weiß, wie lokale Sichtbarkeit in dieser Branche wirklich funktioniert und wo Agenturen und Webdesigner kleine Betriebe durchs Raster fallen lassen. <a class="textlink" href="/ueber-mich/">Mehr über mich und meinen Weg</a>.</p>
+      <p class="about-compact-text reveal">Über 6 Jahre Online-Marketing, spezialisiert auf lokale Sichtbarkeit. Mein Fokus: Handwerksbetriebe in Stuttgart und der Region – weil ich weiß, was in dieser Branche wirklich funktioniert. Ich hab selbst Agentur-Erfahrung und mache aktuell unter anderem SEO für einen Mittelstandsbetrieb aus der Metallverarbeitung – handwerk.auffindbar ist mein eigenes Projekt. <a class="textlink" href="/ueber-mich/">Mehr über mich und meinen Weg</a>.</p>
       <div class="about-badges">
         <div class="about-badge reveal"><strong>Eine Person</strong><span>Du arbeitest mit mir, nicht mit einem Ticketsystem.</span></div>
         <div class="about-badge reveal"><strong>Klartext</strong><span>Verständliche Sprache statt Fachbegriffe.</span></div>
         <div class="about-badge reveal"><strong>Festpreise</strong><span>Du weißt vorher, was es kostet. Keine Laufzeitverträge.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ablauf" aria-labelledby="ablauf-heading">
+    <div class="ablauf-inner">
+      <div class="eyebrow reveal">Arbeitsweise</div>
+      <h2 id="ablauf-heading" class="ablauf-headline reveal">Wie die Zusammenarbeit <span class="lime">abläuft.</span></h2>
+
+      <div class="ablauf-step reveal">
+        <div class="ablauf-num">1</div>
+        <div><h3>Kostenloser Sichtbarkeits-Check</h3>
+        <p>Du schickst mir CHECK per WhatsApp oder das Formular. Ich schau mir dein Google-Profil und deine Website an und schick dir 5 konkrete Befunde zurück.</p></div>
+      </div>
+
+      <div class="ablauf-step reveal">
+        <div class="ablauf-num">2</div>
+        <div><h3>Ich schlage dir ein passendes Paket vor</h3>
+        <p>Direkt im Anschluss an den Check, in klaren Worten: welches Paket zu deinem Betrieb passt und warum – ohne dass vorher irgendeine Arbeit beginnt.</p></div>
+      </div>
+
+      <div class="ablauf-step reveal">
+        <div class="ablauf-num">3</div>
+        <div><h3>Du entscheidest, ob wir zusammenarbeiten</h3>
+        <p>Kein Verkaufsgespräch, kein Druck. Du liest dir das in Ruhe durch und entscheidest, ob es für dich passt.</p></div>
+      </div>
+
+      <div class="ablauf-step reveal">
+        <div class="ablauf-num">4</div>
+        <div><h3>Ich mach die umfassende Analyse</h3>
+        <p>Ich schau mir deinen ganzen Auftritt im Detail an – Google-Profil, Website, Wettbewerb in deiner Region. Wenn was unklar ist, frag ich gezielt nach, statt zu raten.</p></div>
+      </div>
+
+      <div class="ablauf-step reveal">
+        <div class="ablauf-num">5</div>
+        <div><h3>Du entscheidest, was umgesetzt wird – und wer's macht</h3>
+        <p>Du bekommst meine Empfehlungen und entscheidest selbst, was du umsetzt. Manches kannst du direkt selbst erledigen, anderes übernehme ich oder dein Webentwickler – ich sag dir zu jedem Punkt, was am sinnvollsten ist.</p></div>
       </div>
     </div>
   </section>
