@@ -406,14 +406,11 @@
       .hero { align-items: center; text-align: center; }
     }
 
-    /* Overlay: kräftiger Lime-Glow als Bild-Ersatz */
+    /* Overlay: dezenter Lime-Hauch */
     .hero::after {
       content: '';
       position: absolute; inset: 0;
-      background:
-        radial-gradient(circle at 50% 25%, rgba(200,230,58,0.22) 0%, transparent 55%),
-        radial-gradient(circle at 15% 85%, rgba(200,230,58,0.10) 0%, transparent 45%),
-        radial-gradient(circle at 85% 80%, rgba(200,230,58,0.08) 0%, transparent 40%);
+      background: radial-gradient(circle at 50% 25%, rgba(200,230,58,0.06) 0%, transparent 55%);
       z-index: 0;
     }
 
@@ -426,9 +423,9 @@
       pointer-events: none; filter: blur(90px);
     }
     .orb-1 {
-      width: min(750px, 110vw); height: min(750px, 110vw);
-      background: radial-gradient(circle, rgba(200,230,58,0.16) 0%, transparent 68%);
-      top: -100px; left: 50%; transform: translateX(-50%);
+      width: min(600px, 100vw); height: min(600px, 100vw);
+      background: radial-gradient(circle, rgba(200,230,58,0.07) 0%, transparent 70%);
+      top: -80px; left: 50%; transform: translateX(-50%);
       animation: orbFloat 9s ease-in-out infinite;
     }
     @keyframes orbFloat {
@@ -841,6 +838,16 @@
     .blog-teaser-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px; margin-top: 28px; text-align: left;
+    }
+    @media (max-width: 700px) {
+      .blog-teaser-grid {
+        display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; margin-left: -20px; margin-right: -20px;
+        padding: 0 20px 8px; gap: 12px;
+      }
+      .blog-teaser-card {
+        flex: 0 0 78%; scroll-snap-align: start;
+      }
     }
     .blog-teaser-card {
       display: block; text-decoration: none;
@@ -1278,31 +1285,31 @@
       <div class="ablauf-step reveal">
         <div class="ablauf-num">1</div>
         <div><h3>Kostenloser Sichtbarkeits-Check</h3>
-        <p>Du schickst mir CHECK per WhatsApp oder das Formular. Ich schau mir dein Google-Profil und deine Website an und schick dir 5 konkrete Befunde zurück.</p></div>
+        <p>CHECK per WhatsApp – du bekommst 5 konkrete Befunde zu Google-Profil und Website.</p></div>
       </div>
 
       <div class="ablauf-step reveal">
         <div class="ablauf-num">2</div>
         <div><h3>Ich schlage dir ein passendes Paket vor</h3>
-        <p>Direkt im Anschluss an den Check, in klaren Worten: welches Paket zu deinem Betrieb passt und warum – ohne dass vorher irgendeine Arbeit beginnt.</p></div>
+        <p>Direkt danach sag ich dir, welches Paket passt – bevor irgendeine Arbeit beginnt.</p></div>
       </div>
 
       <div class="ablauf-step reveal">
         <div class="ablauf-num">3</div>
         <div><h3>Du entscheidest, ob wir zusammenarbeiten</h3>
-        <p>Kein Verkaufsgespräch, kein Druck. Du liest dir das in Ruhe durch und entscheidest, ob es für dich passt.</p></div>
+        <p>Kein Verkaufsgespräch, kein Druck – du entscheidest in Ruhe.</p></div>
       </div>
 
       <div class="ablauf-step reveal">
         <div class="ablauf-num">4</div>
         <div><h3>Du bekommst einen klaren Maßnahmenplan</h3>
-        <p>Du bekommst einen klaren Maßnahmenplan mit konkreten Optimierungen – in verständlicher Sprache, keine Marketing-Fachbegriffe.</p></div>
+        <p>Konkrete Optimierungen in verständlicher Sprache, keine Marketing-Fachbegriffe.</p></div>
       </div>
 
       <div class="ablauf-step reveal">
         <div class="ablauf-num">5</div>
         <div><h3>Du bestimmst, wer umsetzt</h3>
-        <p>Du bestimmst, welche Maßnahmen umgesetzt werden und wer sie übernimmt – du selbst, ich mit deinen Zugängen, oder dein Webentwickler.</p></div>
+        <p>Du selbst, ich mit deinen Zugängen, oder dein Webentwickler – deine Wahl.</p></div>
       </div>
     </div>
   </section>
