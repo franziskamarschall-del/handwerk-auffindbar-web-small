@@ -406,11 +406,14 @@
       .hero { align-items: center; text-align: center; }
     }
 
-    /* Overlay: dezenter Glow, kein Bild mehr im Hintergrund */
+    /* Overlay: kräftiger Lime-Glow als Bild-Ersatz */
     .hero::after {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(circle at 50% 30%, rgba(200,230,58,0.06) 0%, transparent 60%);
+      background:
+        radial-gradient(circle at 50% 25%, rgba(200,230,58,0.22) 0%, transparent 55%),
+        radial-gradient(circle at 15% 85%, rgba(200,230,58,0.10) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(200,230,58,0.08) 0%, transparent 40%);
       z-index: 0;
     }
 
@@ -423,9 +426,9 @@
       pointer-events: none; filter: blur(90px);
     }
     .orb-1 {
-      width: min(600px, 100vw); height: min(600px, 100vw);
-      background: radial-gradient(circle, rgba(200,230,58,0.07) 0%, transparent 70%);
-      top: -80px; left: 50%; transform: translateX(-50%);
+      width: min(750px, 110vw); height: min(750px, 110vw);
+      background: radial-gradient(circle, rgba(200,230,58,0.16) 0%, transparent 68%);
+      top: -100px; left: 50%; transform: translateX(-50%);
       animation: orbFloat 9s ease-in-out infinite;
     }
     @keyframes orbFloat {
@@ -462,14 +465,28 @@
 
     .hero h1 {
       font-size: clamp(36px, 7vw, 64px);
-      font-weight: 400; line-height: 1.15;
-      letter-spacing: -0.02em;
+      font-weight: 600; line-height: 1.1;
+      letter-spacing: -0.03em;
       max-width: min(700px, 90vw);
       margin-left: auto; margin-right: auto;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.38s forwards;
     }
-    .hero h1 .accent { color: var(--lime); display: block; }
+    .hero h1 .accent {
+      color: var(--lime); display: block;
+      opacity: 0; transform: scale(2.8) translateY(10px);
+    }
+    .hero h1 .accent.hit {
+      transition: transform 1.8s cubic-bezier(0.22, 1.4, 0.36, 1), opacity 0.3s ease-out;
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+    .hero h1.shake { animation: heroShake 0.6s ease-out; }
+    @keyframes heroShake {
+      0%   { transform: translateY(0); }
+      20%  { transform: translateY(6px); }
+      45%  { transform: translateY(-4px); }
+      70%  { transform: translateY(2px); }
+      100% { transform: translateY(0); }
+    }
     .hero h1 .hero-kicker {
       display: block;
       font-size: clamp(13px, 2.2vw, 17px);
@@ -487,8 +504,6 @@
       font-weight: 400; color: var(--white-70);
       max-width: min(480px, 90vw);
       line-height: 1.65;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.55s forwards;
     }
 
     .hero-cta-btn {
@@ -498,7 +513,11 @@
       font-family: 'Poppins', sans-serif; font-size: clamp(13px, 3vw, 15px); font-weight: 700;
       text-decoration: none; padding: 14px 28px; border-radius: 100px;
       transition: transform 0.25s, box-shadow 0.25s;
-      opacity: 0; animation: fadeUp 0.8s ease 0.63s forwards;
+      animation: ctaPulse 2.5s ease-in-out 2.4s infinite;
+    }
+    @keyframes ctaPulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(200,230,58,0.45); }
+      50%      { box-shadow: 0 0 0 14px rgba(200,230,58,0); }
     }
     .hero-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px var(--lime-glow); }
 
@@ -507,8 +526,6 @@
       display: flex; align-items: center;
       gap: clamp(10px, 3vw, 24px);
       flex-wrap: wrap; justify-content: center;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.72s forwards;
     }
     .chip {
       display: flex; align-items: center; gap: 6px;
@@ -1059,7 +1076,7 @@
 
 <h1 id="hero-heading">
       <span class="hero-kicker">SEO für Handwerker in Stuttgart & Region</span>
-      <span class="accent">Mehr Anfragen</span> über Google –<br>
+      <span class="accent" id="hero-accent">Mehr Anfragen</span> über Google –<br>
       ohne Werbebudget.
     </h1>
 
@@ -1673,5 +1690,13 @@
     WhatsApp
   </a>
 
+  <script>
+    setTimeout(function () {
+      var accent = document.getElementById('hero-accent');
+      var heading = document.getElementById('hero-heading');
+      if (accent) accent.classList.add('hit');
+      if (heading) heading.classList.add('shake');
+    }, 900);
+  </script>
 </body>
 </html>
