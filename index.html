@@ -395,36 +395,23 @@
       position: relative; z-index: 1;
       min-height: 100svh;
       display: flex; flex-direction: column;
-      align-items: flex-start; justify-content: center;
-      text-align: left;
+      align-items: center; justify-content: center;
+      text-align: center;
       padding: clamp(100px, 15vw, 140px) clamp(20px, 6vw, 80px) clamp(80px, 10vw, 100px);
       overflow: hidden;
-      background-image: url('./franziska-laptop.jpg');
-      background-size: cover;
-      background-position: right 30%;
-      background-repeat: no-repeat;
+      background: var(--navy-deep);
     }
 
     @media (max-width: 768px) {
-      .hero {
-        align-items: center;
-        text-align: center;
-        background-position: center 12%;
-      }
+      .hero { align-items: center; text-align: center; }
     }
 
-    /* Overlay: gradient from left (dark, for text) to right (clearer, shows face) */
+    /* Overlay: dezenter Glow, kein Bild mehr im Hintergrund */
     .hero::after {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(90deg, rgba(15,26,46,0.88) 0%, rgba(15,26,46,0.75) 38%, rgba(15,26,46,0.35) 65%, rgba(15,26,46,0.25) 100%);
+      background: radial-gradient(circle at 50% 30%, rgba(200,230,58,0.06) 0%, transparent 60%);
       z-index: 0;
-    }
-
-    @media (max-width: 768px) {
-      .hero::after {
-        background: rgba(15,26,46,0.7);
-      }
     }
 
     /* Alles im Hero über dem Overlay */
@@ -475,9 +462,10 @@
 
     .hero h1 {
       font-size: clamp(36px, 7vw, 64px);
-      font-weight: 900; line-height: 1.04;
-      letter-spacing: -0.04em;
-      max-width: min(560px, 90vw);
+      font-weight: 400; line-height: 1.15;
+      letter-spacing: -0.02em;
+      max-width: min(700px, 90vw);
+      margin-left: auto; margin-right: auto;
       opacity: 0;
       animation: fadeUp 0.8s ease 0.38s forwards;
     }
@@ -494,6 +482,7 @@
 
     .hero-sub {
       margin-top: clamp(18px, 4vw, 28px);
+      margin-left: auto; margin-right: auto;
       font-size: clamp(14px, 3.5vw, 18px);
       font-weight: 400; color: var(--white-70);
       max-width: min(480px, 90vw);
@@ -806,6 +795,18 @@
     /* ── ABOUT KOMPAKT ── */
     .about-compact { position: relative; z-index: 1; padding: clamp(50px, 8vw, 80px) 20px; }
     .about-compact-inner { max-width: 820px; margin: 0 auto; }
+    .about-compact-grid {
+      display: grid; grid-template-columns: 260px 1fr; gap: clamp(28px, 5vw, 44px);
+      align-items: center; max-width: 980px;
+    }
+    .about-compact-img {
+      width: 100%; height: auto; border-radius: 18px;
+      border: 1px solid var(--white-10); object-fit: cover; aspect-ratio: 900/676;
+    }
+    @media (max-width: 700px) {
+      .about-compact-grid { grid-template-columns: 1fr; }
+      .about-compact-img { max-width: 340px; margin: 0 auto; }
+    }
     .about-compact-headline { font-size: clamp(24px, 4.5vw, 36px); font-weight: 800; letter-spacing: -0.03em; margin: 14px 0 18px; }
     .about-compact-text { font-size: clamp(14px, 3vw, 16px); line-height: 1.75; color: var(--white-70); margin-bottom: 28px; }
     .about-badges { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
@@ -1249,14 +1250,17 @@
   </section>
   <!-- FAQ -->
   <section class="about-compact" id="ueber-mich" aria-labelledby="about-heading">
-    <div class="about-compact-inner">
-      <div class="eyebrow reveal">Wer ich bin</div>
-      <h2 id="about-heading" class="about-compact-headline reveal">Ich bin Franziska. Ich mache, dass du <span class="lime">gefunden wirst.</span></h2>
-      <p class="about-compact-text reveal">Über 6 Jahre Online-Marketing, spezialisiert auf lokale Sichtbarkeit. Mein Fokus: Handwerksbetriebe in Stuttgart und der Region – weil ich weiß, was in dieser Branche wirklich funktioniert. Ich hab selbst Agentur-Erfahrung und mache aktuell unter anderem SEO für einen Mittelstandsbetrieb aus der Metallverarbeitung – handwerk.auffindbar ist mein eigenes Projekt. <a class="textlink" href="/ueber-mich/">Mehr über mich und meinen Weg</a>.</p>
-      <div class="about-badges">
-        <div class="about-badge reveal"><strong>Eine Person</strong><span>Du arbeitest mit mir, nicht mit einem Ticketsystem.</span></div>
-        <div class="about-badge reveal"><strong>Klartext</strong><span>Verständliche Sprache statt Fachbegriffe.</span></div>
-        <div class="about-badge reveal"><strong>Festpreise</strong><span>Du weißt vorher, was es kostet. Keine Laufzeitverträge.</span></div>
+    <div class="about-compact-inner about-compact-grid">
+      <img src="/images/franziska-lachend.jpg" alt="Franziska Marschall, SEO-Beraterin für Handwerksbetriebe in Stuttgart und Region" class="about-compact-img reveal" width="900" height="676" loading="lazy">
+      <div>
+        <div class="eyebrow reveal">Wer ich bin</div>
+        <h2 id="about-heading" class="about-compact-headline reveal">Ich bin Franziska. Ich mache, dass du <span class="lime">gefunden wirst.</span></h2>
+        <p class="about-compact-text reveal">Über 6 Jahre Online-Marketing, spezialisiert auf lokale Sichtbarkeit. Mein Fokus: Handwerksbetriebe in Stuttgart und der Region – weil ich weiß, was in dieser Branche wirklich funktioniert. Ich hab selbst Agentur-Erfahrung und mache aktuell unter anderem SEO für einen Mittelstandsbetrieb aus der Metallverarbeitung – handwerk.auffindbar ist mein eigenes Projekt. <a class="textlink" href="/ueber-mich/">Mehr über mich und meinen Weg</a>.</p>
+        <div class="about-badges">
+          <div class="about-badge reveal"><strong>Eine Person</strong><span>Du arbeitest mit mir, nicht mit einem Ticketsystem.</span></div>
+          <div class="about-badge reveal"><strong>Klartext</strong><span>Verständliche Sprache statt Fachbegriffe.</span></div>
+          <div class="about-badge reveal"><strong>Festpreise</strong><span>Du weißt vorher, was es kostet. Keine Laufzeitverträge.</span></div>
+        </div>
       </div>
     </div>
   </section>
