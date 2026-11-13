@@ -1,12 +1,13 @@
 # handwerk.auffindbar
 
-> Lokale SEO-Beratung von Franziska Marschall für Handwerksbetriebe
-> in Stuttgart & Region (Rems-Murr-Kreis). Mehr Anfragen über Google –
-> ohne Werbebudget, ohne Agentur. Kleinbetriebe 1–10 Mitarbeiter.
+> SEO-Beratung von Franziska Marschall für Handwerksbetriebe in ganz Deutschland
+> (Sitz: Schwaikheim bei Stuttgart). Mehr Anfragen über Google – ohne Werbebudget,
+> ohne Agentur. Alles schriftlich: Du bekommst Befunde und Anleitungen, die du direkt
+> an deinen Webdesigner weiterleitest. Kleinbetriebe mit 1–10 Mitarbeitern.
 
 ## Leistungen
 - Google-Unternehmensprofil einrichten und optimieren
-- Lokale Website-Optimierung (Keywords, Title, Meta, Struktur)
+- Website-Prüfung für Handwerker (Seitentitel, Orte, Leistungsseiten) mit fertiger Anleitung für den Webdesigner
 - Bewertungsstrategie
 - KI-Auffindbarkeit (ChatGPT, Perplexity, Gemini)
 
@@ -15,26 +16,20 @@
 - [Startseite](https://handwerk-auffindbar-machen.de/): Überblick & kostenloser Sichtbarkeits-Check per WhatsApp
 - [KI-Sichtbarkeit für Handwerker](https://handwerk-auffindbar-machen.de/ki-sichtbarkeit-handwerk/): Wie Betriebe von ChatGPT, Perplexity & Co. empfohlen werden
 - [Über Franziska Marschall](https://handwerk-auffindbar-machen.de/ueber-mich/): Hintergrund, Arbeitsweise, Beweise
-
 - [Website-Quick-Wins für Handwerker](https://handwerk-auffindbar-machen.de/handwerker-website/): 7 Verbesserungen ohne Relaunch und ohne Agentur
-
 - [Google-Unternehmensprofil für Handwerker](https://handwerk-auffindbar-machen.de/google-unternehmensprofil-handwerker/): Schritt-für-Schritt-Anleitung, kostenlos mehr Anrufe
-
 - [Google-Bewertungen für Handwerker](https://handwerk-auffindbar-machen.de/google-bewertungen-handwerker/): Wann und wie fragen, Reaktion auf schlechte Bewertungen
-
+- [SEO für Handwerker in Stuttgart & Region – Suchbegriffe, Orte, Selbstcheck](https://handwerk-auffindbar-machen.de/seo-fuer-handwerker-stuttgart/)
 - [SEO für Sanitär & Heizung: Notdienst und Planungskunden bei Google gewinnen](https://handwerk-auffindbar-machen.de/seo-fuer-sanitaer-heizung-stuttgart/)
 - [SEO für Elektriker: Wallbox, PV und Notdienst sichtbar machen](https://handwerk-auffindbar-machen.de/seo-fuer-elektriker-stuttgart/)
 - [SEO für Maler & Lackierer: Fotos und Bewertungen als Verkaufsargument](https://handwerk-auffindbar-machen.de/seo-fuer-maler-stuttgart/)
 - [SEO für Dachdecker: Vertrauen für große Projekte bei Google aufbauen](https://handwerk-auffindbar-machen.de/seo-fuer-dachdecker-stuttgart/)
 - [SEO für Garten- & Landschaftsbau: Saisonale Sichtbarkeit vor der Februar-Suchwelle](https://handwerk-auffindbar-machen.de/seo-fuer-galabau-stuttgart/)
-
 - [Blog](https://handwerk-auffindbar-machen.de/blog/): Kurze, konkrete Beiträge zu lokaler Sichtbarkeit
-
 - [Warum wird mein Betrieb bei Google nicht gefunden? 5 Gründe](https://handwerk-auffindbar-machen.de/blog/warum-google-nicht-gefunden/)
 - [Google-Unternehmensprofil einrichten: Schritt-für-Schritt-Kurzanleitung](https://handwerk-auffindbar-machen.de/blog/google-unternehmensprofil-anleitung/)
 - [Google-Bewertungen bekommen, ohne dass es peinlich wird](https://handwerk-auffindbar-machen.de/blog/google-bewertungen-bekommen/)
 - [Schlechte Google-Bewertung erhalten - was jetzt?](https://handwerk-auffindbar-machen.de/blog/schlechte-google-bewertung-was-tun/)
-
 - [Google Maps für Handwerker: Warum du bei der Kartensuche nicht auftauchst](https://handwerk-auffindbar-machen.de/blog/google-maps-fuer-handwerker/)
 
 ## Kontakt
