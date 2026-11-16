@@ -1,4 +1,4 @@
-<!-- BUILD-MARKER: v5-bundesweit-13-11-2026 -->
+<!-- BUILD-MARKER: v6c-kompakt-16-11-2026 -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -1036,6 +1036,58 @@
     @media (max-width: 600px) {
       .wa-float { bottom: 20px; right: 16px; padding: 11px 16px 11px 12px; font-size: 12px; }
     }
+
+    /* ── v6: Variante 2 (helle Abschnitte), Kennst du das?, Buttons ── */
+    .textlink { color: var(--lime); text-decoration: underline; text-underline-offset: 3px; }
+    .ablauf .ablauf-num { background: #E9F2C2; border-color: #9DB51F; color: #0F1A2E; }
+    body { background: #1A2B4A; }
+    .diff { background: #16253F; }
+    .kdd, .problem, .ablauf, .faq { background: #F4F6EF; color: #0F1A2E; }
+    .problem, .ablauf, .faq { padding-top: clamp(56px, 9vw, 90px); padding-bottom: clamp(56px, 9vw, 90px); }
+    .kdd h2, .problem h2, .ablauf h2, .faq h2, .ablauf h3 { color: #0F1A2E; }
+    .kdd .lime, .problem .lime, .ablauf .lime, .faq .lime { color: #0F1A2E; background: linear-gradient(transparent 58%, #C8E63A 58%); }
+    .kdd .eyebrow, .problem .eyebrow, .ablauf .eyebrow, .faq .eyebrow { color: #55650F; }
+    .kdd .eyebrow::before, .problem .eyebrow::before, .ablauf .eyebrow::before, .faq .eyebrow::before { background: #55650F; }
+    .problem-text, .ablauf-step p { color: rgba(15,26,46,0.78); }
+    .problem-text strong, .kdd strong { color: #0F1A2E; }
+    .kdd a.textlink, .problem a, .ablauf a { color: #0F1A2E !important; text-decoration-color: #9DB51F; }
+    .ablauf-step { border-color: rgba(15,26,46,0.12) !important; }
+    .faq-item { background: #fff; border-color: #DDE2D3; }
+    .faq-item.open { border-color: #9DB51F; }
+    .faq-q-text { color: #0F1A2E; }
+    .faq-answer-inner { color: rgba(15,26,46,0.75); }
+    .faq-icon::before, .faq-icon::after { background: #0F1A2E; }
+    .kdd a:focus-visible, .problem a:focus-visible, .ablauf a:focus-visible, .faq button:focus-visible { outline-color: #0F1A2E; }
+
+    .kdd { position: relative; z-index: 1; padding: clamp(56px, 9vw, 90px) 20px; }
+    .kdd-inner { max-width: 1040px; margin: 0 auto; text-align: center; }
+    .kdd-headline { font-size: clamp(28px, 5vw, 44px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; }
+    .kdd-intro { font-size: clamp(15px, 3vw, 17px); line-height: 1.7; color: rgba(15,26,46,0.78); max-width: 640px; margin: 14px auto 0; }
+    .kdd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; margin: clamp(28px, 5vw, 40px) 0; text-align: left; }
+    .kdd-card { background: #fff; border: 1px solid #DDE2D3; border-radius: 16px; padding: 22px 24px; }
+    .kdd-hook { font-size: 16.5px; font-weight: 600; line-height: 1.45; color: #0F1A2E; margin-bottom: 8px; }
+    .kdd-sol { font-size: 14.5px; line-height: 1.65; color: rgba(15,26,46,0.75); }
+    .kdd-cta-text { font-size: clamp(16px, 3.2vw, 19px); font-weight: 500; color: #0F1A2E; }
+    .check-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+    .check-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 50px; padding: 12px 24px; border-radius: 100px; font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; text-decoration: none; transition: transform 0.2s ease; }
+    .check-btn:hover { transform: translateY(-2px); }
+    .check-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .check-btn-ig { background: #0F1A2E; color: #fff; }
+    .check-btn-ig svg { fill: #C8E63A; }
+    .check-btn-wa { background: #25D366; color: #0F1A2E; }
+    .check-btn-wa svg { fill: #0F1A2E; }
+    .benefits { padding-top: clamp(56px, 9vw, 90px); }
+    .benefits-sub { font-size: clamp(15px, 3vw, 17px); color: var(--white-70); margin-top: 14px; }
+    .benefit-card a { color: var(--lime); text-decoration: underline; text-underline-offset: 3px; }
+    .audience-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    @media (max-width: 600px) { .audience-grid { grid-template-columns: 1fr 1fr; gap: 10px; } .audience-card { padding: 18px 16px; } .audience-card h3 { font-size: 15px; } }
+    .audience { padding-top: clamp(48px, 8vw, 72px); padding-bottom: clamp(48px, 8vw, 72px); }
+    .audience-head { margin-bottom: 24px; }
+    .gewerk-pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .gewerk-pill { display: inline-flex; align-items: center; min-height: 46px; padding: 10px 20px; border: 1px solid rgba(200,230,58,0.45); border-radius: 100px; color: #fff; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s; }
+    .gewerk-pill:hover { background: var(--lime); color: #0F1A2E; }
+    .gewerk-note { text-align: center; font-size: 14px; color: var(--white-70); margin-top: 18px; }
+    .benefits { padding-bottom: clamp(40px, 7vw, 64px); }
   </style>
 </head>
 <body>
@@ -1050,7 +1102,7 @@
       </div>
       <div>
         <div class="logo-text">handwerk<span>.auffindbar</span></div>
-        <div class="logo-sub">SEO für Handwerker</div>
+        <div class="logo-sub">Gefunden. Überzeugt. Angefragt.</div>
       </div>
     </a>
     <div class="nav-links">
@@ -1098,22 +1150,54 @@
   <!-- ABOUT -->
 
 
-  <section class="problem" aria-labelledby="problem-heading">
-    <div class="problem-inner">
+  <section class="kdd" aria-labelledby="kdd-heading">
+    <div class="kdd-inner">
       <div class="eyebrow reveal" style="justify-content:center;">Das Problem</div>
-      <h2 id="problem-heading" class="problem-headline reveal">Deine Kunden googeln. <span class="lime">Und finden die Konkurrenz.</span></h2>
-      <p class="problem-text reveal">Wer heute einen Elektriker, einen Dachdecker oder einen Sanitärbetrieb sucht, fragt nicht mehr im Bekanntenkreis – er tippt es bei Google ein. Und entscheidet sich in Sekunden für einen der drei Einträge, die oben in der Karte stehen.</p>
-      <p class="problem-text reveal" style="margin-top:14px;">Wenn dein Betrieb dort nicht auftaucht, findet der Auftrag trotzdem statt. Nur eben bei der Konkurrenz nebenan. Das ist kein Marketing-Problem, das ist <strong>entgangener Umsatz – jede Woche.</strong> <a class="textlink" href="/seo-fuer-handwerker/" style="color:var(--lime);">Was dahintersteckt und wie du das änderst →</a></p>
+      <h2 id="kdd-heading" class="kdd-headline reveal">Kennst du <span class="lime">das?</span></h2>
+      <p class="kdd-intro reveal">Deine Kunden googeln – und finden die Konkurrenz. Meistens steckt eine dieser Situationen dahinter. <a class="textlink" href="/seo-fuer-handwerker/">Was dahintersteckt →</a></p>
+      <div class="kdd-grid">
+        <div class="kdd-card reveal"><p class="kdd-hook">„Du schaust deine Website an und denkst: Irgendwas fehlt doch.“</p><p class="kdd-sol">Meistens ist es eine Kleinigkeit: Gewerk und Ort stehen nicht da, wo Google sie sucht.</p></div>
+        <div class="kdd-card reveal"><p class="kdd-hook">„Neue Website, sieht top aus – aber das Telefon bleibt still?“</p><p class="kdd-sol">Schön heißt nicht gefunden. Google braucht klare Seitentitel, deine Orte und eine Seite pro Leistung.</p></div>
+        <div class="kdd-card reveal"><p class="kdd-hook">„Du machst gute Arbeit, aber die Aufträge gehen an die Konkurrenz?“</p><p class="kdd-sol">Die steht in der Google-Karte über dir. Meistens wegen Profil und Bewertungen, nicht wegen der Arbeit.</p></div>
+        <div class="kdd-card reveal"><p class="kdd-hook">„Keine Website? Dann fang mit dem Google-Profil an.“</p><p class="kdd-sol">Ein vollständiges Profil bringt schon Anrufe. Die Website kommt später – und dann von Anfang an richtig.</p></div>
+        <div class="kdd-card reveal"><p class="kdd-hook">„Deine Follower sind Handwerker. Deine Kunden nicht.“</p><p class="kdd-sol">Instagram zeigt, was du kannst. Google bringt die, die dich gerade brauchen – sie suchen „Leistung + Ort“.</p></div>
+      </div>
+      <p class="kdd-cta-text reveal">Erkennst du dich wieder? Schreib mir <strong>CHECK</strong> – ich schau kostenlos drauf.</p>
+      <div class="check-btns">
+        <a class="check-btn check-btn-ig" href="https://ig.me/m/handwerk.auffindbar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>CHECK per Instagram</a>
+        <a class="check-btn check-btn-wa" href="https://wa.me/491755702816?text=CHECK" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.523 5.847L.057 23.882l6.19-1.424A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.876 9.876 0 0 1-5.031-1.377l-.361-.214-3.741.981.998-3.648-.235-.374A9.865 9.865 0 0 1 2.106 12C2.106 6.533 6.533 2.106 12 2.106c5.468 0 9.894 4.427 9.894 9.894 0 5.468-4.426 9.894-9.894 9.894z"/></svg>CHECK per WhatsApp</a>
+      </div>
     </div>
   </section>
 
-  <section class="problem" aria-labelledby="webdesigner-heading" style="padding-top:0;">
-    <div class="problem-inner">
-      <div class="eyebrow reveal" style="justify-content:center;">Auch mit Website</div>
-      <h2 id="webdesigner-heading" class="problem-headline reveal">Dein Webdesigner hat eine schöne Seite gebaut – <span class="lime">aber hat er an Google gedacht?</span></h2>
-      <p class="problem-text reveal">Meistens fehlt keine neue Website, sondern eine Kleinigkeit: der richtige Seitentitel, dein Ort, eine eigene Seite pro Leistung. Ich sage dir <strong>schriftlich</strong>, was fehlt – du leitest es an deinen Webdesigner weiter. Der baut es ein, du behältst die Kontrolle. <a class="textlink" href="/handwerker-website/" style="color:var(--lime);">Die 7 häufigsten Lücken →</a></p>
+  <section class="benefits" aria-labelledby="benefits-heading">
+    <div class="benefits-inner">
+      <div class="benefits-head">
+        <div class="eyebrow" style="justify-content:center;">Worauf es ankommt</div>
+        <h2 id="benefits-heading" class="benefits-headline">Gefunden. Überzeugt. <span class="lime">Angefragt.</span></h2>
+        <p class="benefits-sub">Sichtbarkeit ist nur der erste Schritt. Das Ziel ist die Anfrage.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h3>Gefunden</h3>
+          <p>Wer „Gewerk + Ort“ googelt, muss dich sehen: in der Karte, in der Suche und bei ChatGPT &amp; Co. <a href="/google-unternehmensprofil-handwerker/">So füllst du dein Google-Profil richtig aus →</a></p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h3>Überzeugt</h3>
+          <p>Bewertungen, echte Projektfotos, eine klare Startseite. In Sekunden entscheidet der Kunde, ob er dir vertraut. <a href="/google-bewertungen-handwerker/">So bekommst du mehr Bewertungen →</a></p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <h3>Angefragt</h3>
+          <p>Nummer mit einem Tipp, WhatsApp, ein kurzes Formular. Wer suchen muss, wie er dich erreicht, ruft den Nächsten an. <a href="/handwerker-website/">Die häufigsten Website-Lücken →</a></p>
+        </div>
+      </div>
     </div>
   </section>
+
+
 
   <!-- SOCIAL -->
 
@@ -1126,102 +1210,18 @@
         <div class="eyebrow reveal" style="justify-content:center;">Für wen</div>
         <h2 id="audience-heading" class="audience-headline reveal">Für wen ich <span class="lime">arbeite.</span></h2>
       </div>
-      <div class="audience-grid">
-        <div class="audience-card reveal">
-          <div class="audience-num">01</div>
-          <h3><a href="/seo-fuer-elektriker-stuttgart/" style="color:inherit;text-decoration:none;">Elektriker<br><span class="audience-more">Mehr →</span></a></h3>
-          <p>Notdienst-Anfragen entscheiden sich sofort.</p>
-        </div>
-        <div class="audience-card reveal">
-          <div class="audience-num">02</div>
-          <h3><a href="/seo-fuer-sanitaer-heizung-stuttgart/" style="color:inherit;text-decoration:none;">Sanitär & Heizung<br><span class="audience-more">Mehr →</span></a></h3>
-          <p>Hochpreisig – wer zuerst auftaucht, gewinnt.</p>
-        </div>
-        <div class="audience-card reveal">
-          <div class="audience-num">03</div>
-          <h3><a href="/seo-fuer-dachdecker-stuttgart/" style="color:inherit;text-decoration:none;">Dachdecker<br><span class="audience-more">Mehr →</span></a></h3>
-          <p>Akute Suche – sofort sichtbar sein.</p>
-        </div>
-        <div class="audience-card reveal">
-          <div class="audience-num">04</div>
-          <h3><a href="/seo-fuer-maler-stuttgart/" style="color:inherit;text-decoration:none;">Maler & Stuckateur<br><span class="audience-more">Mehr →</span></a></h3>
-          <p>Volles Profil sticht sofort heraus.</p>
-        </div>
-        <div class="audience-card reveal">
-          <div class="audience-num">05</div>
-          <h3>Zimmerei & Holzbau</h3>
-          <p>Sichtbar in der Recherchephase gewinnt.</p>
-        </div>
-
-        <div class="audience-card reveal">
-          <div class="audience-num">06</div>
-          <h3><a href="/seo-fuer-galabau-stuttgart/" style="color:inherit;text-decoration:none;">Garten- & Landschaftsbau<br><span class="audience-more">Mehr →</span></a></h3>
-          <p>Wer im Winter vorbereitet, gewinnt den Sommer.</p>
-        </div>
-
-        <div class="audience-card reveal">
-          <div class="audience-num">07</div>
-          <h3>Fliesenleger</h3>
-          <p>Gute Sichtbarkeit entscheidet die Auswahl.</p>
-        </div>
-
-        <div class="audience-card reveal">
-          <div class="audience-num">08</div>
-          <h3>Schreinerei & Tischlerei</h3>
-          <p>Gefunden während der Recherche gewinnt.</p>
-        </div>
+      <div class="gewerk-pills reveal">
+        <a class="gewerk-pill" href="/seo-fuer-elektriker/">Elektriker →</a>
+        <a class="gewerk-pill" href="/seo-fuer-sanitaer-heizung/">Sanitär &amp; Heizung →</a>
+        <a class="gewerk-pill" href="/seo-fuer-dachdecker/">Dachdecker →</a>
+        <a class="gewerk-pill" href="/seo-fuer-maler/">Maler &amp; Lackierer →</a>
+        <a class="gewerk-pill" href="/seo-fuer-galabau/">Garten- &amp; Landschaftsbau →</a>
       </div>
-      <div class="audience-note reveal"><strong>Dein Gewerk ist nicht dabei?</strong> Kein Ausschlusskriterium. Lokale Sichtbarkeit funktioniert nach denselben Regeln – meld dich einfach, ich sage dir ehrlich, ob es für deinen Betrieb Sinn ergibt. Du sitzt in Stuttgart oder Umgebung? <a class="textlink" href="/seo-fuer-handwerker-stuttgart/" style="color:var(--lime);">Hier geht’s zur Stuttgart-Seite →</a></div>
+      <p class="gewerk-note reveal">Dein Gewerk ist nicht dabei? Bei Google gelten dieselben Regeln. Aus Stuttgart oder Umgebung? <a class="textlink" href="/seo-fuer-handwerker-stuttgart/">Zur Stuttgart-Seite →</a></p>
     </div>
   </section>
 
-  <section class="benefits" aria-labelledby="benefits-heading">
-    <div class="benefits-inner">
-      <div class="benefits-head">
-        <div class="eyebrow" style="justify-content:center;">Warum Google</div>
-        <h2 id="benefits-heading" class="benefits-headline">Warum lokale Google-Sichtbarkeit Werbung <span class="lime">schlägt.</span></h2>
-      </div>
-      <div class="benefits-grid">
 
-        <div class="benefit-card reveal">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M5 6h9a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h11"/></svg></div>
-          <h3>Kostenlos statt laufende Kosten</h3>
-          <p>Anders als Werbung kostet eine gute Google-Sichtbarkeit nichts pro Klick und nichts pro Monat. Einmal aufgebaut, bleibt sie mit wenig Pflege dauerhaft sichtbar.</p>
-        </div>
-
-        <div class="benefit-card reveal">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 3 3 5-6"/></svg></div>
-          <h3>Nachhaltig statt einmalig</h3>
-          <p>Eine gute Position in der lokalen Suche baut sich über Monate auf – und bleibt mit wenig Pflege bestehen. Anders als eine Kampagne, die mit dem Budget endet.</p>
-        </div>
-
-        <div class="benefit-card reveal">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 12.5l2 2 4-4.5"/></svg></div>
-          <h3>Vertrauen vor dem ersten Kontakt</h3>
-          <p>Ein gepflegtes Google-Profil mit aktuellen Fotos und echten Bewertungen schafft Vertrauen, noch bevor ein Kunde überhaupt angerufen hat. <a class="textlink" href="/google-bewertungen-handwerker/">So bekommst du mehr davon →</a></p>
-        </div>
-
-        <div class="benefit-card reveal">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-          <h3>Grundlage für KI-Sichtbarkeit</h3>
-          <p>ChatGPT, Perplexity & Co. greifen für lokale Empfehlungen auf dieselben Daten zurück, die auch bei Google zählen. Wer dort sauber aufgestellt ist, taucht auch in der KI-Suche auf.</p>
-        </div>
-
-        <div class="benefit-card reveal">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
-          <h3>Echte Anfragen statt Preisvergleich</h3>
-          <p>Bei Vermittlungsportalen geht jede Anfrage an mehrere Betriebe gleichzeitig. Wer über Google anfragt, hat sich schon für genau diesen Betrieb entschieden.</p>
-        </div>
-
-        <div class="benefit-card reveal">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2L12 16.4l-6.3 4.6 2.3-7.2-6-4.6h7.6z"/></svg></div>
-          <h3>Klar erkennbar, wer Profi ist</h3>
-          <p>Ein gepflegtes Profil mit echten Bewertungen, echten Fotos und klarer Spezialisierung zeigt sofort, wer seriös arbeitet – anders als auf Vergleichsportalen.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
   <!-- FAQ -->
   <section class="about-compact" id="ueber-mich" aria-labelledby="about-heading">
     <div class="about-compact-inner about-compact-grid">
@@ -1276,7 +1276,7 @@
       <div class="ablauf-step reveal">
         <div class="ablauf-num">1</div>
         <div><h3>Kostenloser Sichtbarkeits-Check</h3>
-        <p>CHECK per WhatsApp – du bekommst 5 konkrete Befunde zu <a class="textlink" href="/google-unternehmensprofil-handwerker/">Google-Profil</a> und <a class="textlink" href="/handwerker-website/">Website</a>.</p></div>
+        <p>CHECK per Instagram oder WhatsApp – du bekommst 5 konkrete Befunde zu <a class="textlink" href="/google-unternehmensprofil-handwerker/">Google-Profil</a> und <a class="textlink" href="/handwerker-website/">Website</a>.</p></div>
       </div>
 
       <div class="ablauf-step reveal">
@@ -1305,12 +1305,25 @@
     </div>
   </section>
 
-  <section style="position:relative;z-index:1;padding:0 20px clamp(60px,10vw,100px);" id="kontakt">
+  <section style="position:relative;z-index:1;padding:clamp(56px,9vw,90px) 20px clamp(60px,10vw,100px);" id="kontakt">
     <div style="max-width:920px;margin:0 auto;">
       <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#C8E63A;display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span style="width:20px;height:1px;background:#C8E63A;display:inline-block;"></span>Kontakt</div>
       <h2 style="font-size:clamp(24px,4.5vw,38px);font-weight:800;letter-spacing:-0.03em;margin-bottom:20px;">Kostenloser <span style="color:#C8E63A;">Sichtbarkeits-Check.</span><br>Meld dich – ich antworte schnell.</h2>
-      <p style="font-size:clamp(14px,3vw,16px);color:rgba(255,255,255,0.7);line-height:1.7;max-width:600px;margin-bottom:32px;">So läuft's: Schick mir eine WhatsApp mit dem Wort <strong>CHECK</strong>. Ich schau mir dein Google-Unternehmensprofil und deine Website an und schick dir 5 konkrete Befunde zurück – Dinge, die dich gerade Anfragen kosten. Kostenlos, unverbindlich, kein Verkaufsgespräch.</p>
+      <p style="font-size:clamp(14px,3vw,16px);color:rgba(255,255,255,0.7);line-height:1.7;max-width:600px;margin-bottom:32px;">So läuft's: Schreib mir <strong>CHECK</strong> per Instagram oder WhatsApp, dazu den Namen deines Betriebs, deine Website und deinen Ort. Ich schau mir dein Google-Profil und deine Website an und schick dir innerhalb von 2 Werktagen 5 konkrete Befunde – Dinge, die dich gerade Anfragen kosten. Kostenlos, unverbindlich, kein Verkaufsgespräch.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+
+        <a href="https://ig.me/m/handwerk.auffindbar"
+           target="_blank" rel="noopener"
+           style="display:flex;align-items:center;gap:16px;padding:24px 28px;background:rgba(200,230,58,0.05);border:1px solid rgba(200,230,58,0.3);border-radius:16px;text-decoration:none;">
+          <div style="width:48px;height:48px;background:rgba(200,230,58,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#C8E63A" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#C8E63A;margin-bottom:3px;">Instagram</div>
+            <div style="font-size:14px;font-weight:500;color:#fff;">@handwerk.auffindbar</div>
+            <div style="font-size:12.5px;color:rgba(255,255,255,0.64);margin-top:2px;">Nachricht mit CHECK</div>
+          </div>
+        </a>
 
         <a href="https://wa.me/491755702816?text=CHECK"
            target="_blank" rel="noopener"
@@ -1480,6 +1493,7 @@
       <div class="footer-logo-text">handwerk<span>.auffindbar</span></div>
     </a>
     <div class="footer-links">
+      <a href="/check/">Kostenloser Check</a>
       <a href="/ueber-mich/">Über mich</a>
       <a href="/ki-sichtbarkeit-handwerk/">KI-Sichtbarkeit</a>
       <a href="/seo-fuer-handwerker/">SEO-Leitfaden</a>
@@ -1487,12 +1501,11 @@
       <a href="/google-unternehmensprofil-handwerker/">Google-Profil</a>
       <a href="/google-bewertungen-handwerker/">Bewertungen</a>
       <a href="/blog/">Blog</a>
-      <a href="/seo-fuer-handwerker-stuttgart/">Handwerker Stuttgart</a>
-      <a href="/seo-fuer-sanitaer-heizung-stuttgart/">Sanitär & Heizung</a>
-      <a href="/seo-fuer-elektriker-stuttgart/">Elektriker</a>
-      <a href="/seo-fuer-maler-stuttgart/">Maler</a>
-      <a href="/seo-fuer-dachdecker-stuttgart/">Dachdecker</a>
-      <a href="/seo-fuer-galabau-stuttgart/">GaLaBau</a>
+      <a href="/seo-fuer-sanitaer-heizung/">Sanitär & Heizung</a>
+      <a href="/seo-fuer-elektriker/">Elektriker</a>
+      <a href="/seo-fuer-maler/">Maler</a>
+      <a href="/seo-fuer-dachdecker/">Dachdecker</a>
+      <a href="/seo-fuer-galabau/">GaLaBau</a>
       <a href="https://www.linkedin.com/company/130604329" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-icon">
         <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
